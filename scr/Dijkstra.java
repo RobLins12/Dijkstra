@@ -30,7 +30,7 @@ public class Dijkstra {
         
         while(!q.isEmpty()){
             Vertice u = minSize(q, vertices);
-            q.remove();
+            q.remove(u);
 
             for (Vertice v : u.lista) {
                 Integer alt = dist[vertices.indexOf(u)] + graph.getPeso(u, v);
@@ -56,6 +56,7 @@ public class Dijkstra {
         }
 
         System.out.print(source.nome);
+        System.out.println("");
         
     }
 
